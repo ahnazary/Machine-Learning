@@ -32,6 +32,7 @@ Z = clf.decision_function(xy).reshape(XX.shape)
 ax.contour(
     XX, YY, Z, colors="k", levels=[-1, 0, 1], alpha=0.5, linestyles=["--", "-", "--"]
 )
+
 # plot support vectors
 ax.scatter(
     clf.support_vectors_[:, 0],
@@ -41,4 +42,5 @@ ax.scatter(
     facecolors="none",
     edgecolors="k",
 )
+print(clf.predict([[4, 4]]))
 plt.show()
