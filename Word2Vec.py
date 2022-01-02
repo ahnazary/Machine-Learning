@@ -31,7 +31,7 @@ for i in sent_tokenize(f):
 model1 = gensim.models.Word2Vec(data, min_count=1,
                                 window=10)
 
-# Print results
+    # Print results
 print("Cosine similarity between 'alice' " +
       "and 'wonderland' - CBOW : ",
       model1.wv.similarity('alice', 'wonderland'))
