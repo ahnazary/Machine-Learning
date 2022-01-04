@@ -28,26 +28,22 @@ for i in sent_tokenize(f):
     data.append(temp)
 
 # Create CBOW model
-model1 = gensim.models.Word2Vec(data, min_count=1,
-                                window=10)
-
-    # Print results
-print("Cosine similarity between 'alice' " +
-      "and 'wonderland' - CBOW : ",
-      model1.wv.similarity('alice', 'wonderland'))
-
-print("Cosine similarity between 'alice' " +
-      "and 'machines' - CBOW : ",
-      model1.wv.similarity('alice', 'machines'))
-
-# Create Skip Gram model
-model2 = gensim.models.Word2Vec(data, min_count=1, window=10, sg=1)
+print(data)
+model1 = gensim.models.Word2Vec(data, min_count=3,
+                                window=3)
 
 # Print results
-print("Cosine similarity between 'alice' " +
-      "and 'wonderland' - Skip Gram : ",
-      model2.wv.similarity('alice', 'wonderland'))
+word1 = "king"
+word2 = "copyright"
+print("Cosine similarity between '" + word1 + "' " +
+      "and '" + word2 + "' - CBOW : ",
+      model1.wv.similarity(word1, word2))
 
-print("Cosine similarity between 'alice' " +
-      "and 'machines' - Skip Gram : ",
-      model2.wv.similarity('alice', 'machines'))
+# Create Skip Gram model
+model2 = gensim.models.Word2Vec(data, min_count=3, window=3, sg=1)
+
+# Print results
+print("Cosine similarity between '" + word1 + "' " +
+      "and '" + word2 + "' - Skip Gram : ",
+      model2.wv.similarity(word1, word2))
+
