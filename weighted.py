@@ -30,8 +30,19 @@ def plot_decision_function(classifier, sample_weight, axis, title):
 np.random.seed(0)
 # X = np.r_[np.random.randn(10, 2) + [1, 1], np.random.randn(10, 2)]
 # y = [1] * 10 + [-1] * 10
-X = np.array([[0, 0], [0, 2], [0, 4], [2, 4], [4, 4], [4, 2], [4, 0], [2, 0]])
-y = np.array([0, 1, 0, 1, 0, 1, 0 , 1])
+# X = np.array([[0, 0], [0, 2], [0, 4], [2, 4], [4, 4], [4, 2], [4, 0], [2, 0]])
+# y = np.array([0, 1, 0, 1, 0, 1, 0 , 1])
+
+X = np.array([[0.2, 0.553519174456596],
+              [0.3, 0.830065906047821],
+              [0.2, 0.999999940395355],
+              [0.15, 0.983746290206909],
+              [0.5, 1.0],
+              [0.1, 0.960313141345978],
+              [0.04, 0.4],
+              [0.1, 0.985110819339752]])
+y = np.array([0, 1, 0, 1, 1, 1, 0, 0])
+
 print(X)
 sample_weight_last_ten = abs(np.random.randn(len(X)))
 sample_weight_constant = np.ones(len(X))
