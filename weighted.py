@@ -58,7 +58,7 @@ print(sample_weight_constant)
 
 # fit the model
 clf_weights = svm.SVC(gamma=1)
-clf_weights.fit(X, y, sample_weight=sample_weight_last_ten)
+clf_weights.fit(X, y)
 
 clf_no_weights = svm.SVC(gamma=1)
 clf_no_weights.fit(X, y)
