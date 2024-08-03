@@ -1,3 +1,31 @@
-# Machine-Learning
+# python-template-repo
+Python template repository: A ready-to-use template repository with generic Github action workflows, directory structure and files. 
 
-This repo is created to keep track of my learning progress in Machine Learning. I will be using the book RWTH Aachen University's Machine Learning course as a reference.
+## Setup sphinx documentation
+
+1. Install sphinx requirements (already in requirements.txt)
+
+```bash
+pip install -r requirements.txt
+```
+
+2 . Create sphinx documentation base files
+
+```bash
+sphinx-quickstart         
+sphinx-apidoc -o docs src
+```
+
+3. Build sphinx documentation
+
+```bash
+cd docs
+make html
+```
+
+or 
+
+```bash
+cd docs
+sphinx-build docs build    
+```
